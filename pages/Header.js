@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -5,6 +6,18 @@ const Header = () => {
   const [profile, setProfile] = useState(false);
   const [product, setProduct] = useState(false);
   const [deliverables, setDeliverables] = useState(false);
+
+  const MenuItem =<React.Fragment>
+    <a href="" className="py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+    <Link href='/'> Home</Link>
+
+    </a>
+    <a href="" className='py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out'>        
+    <Link href='/blog'> Blogs</Link>
+    </a>
+
+  </React.Fragment>
+
   return (
     <div>
       <div className="bg-gray-200 h-full w-full">
@@ -12,145 +25,12 @@ const Header = () => {
         <nav className="bg-white shadow xl:block hidden">
           <div className="mx-auto container px-6 py-2 xl:py-0">
             <div className="flex items-center justify-between">
+                
               <div className="inset-y-0 left-0 flex items-center xl:hidden">
+
                 <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
-                  <div className="visible xl:hidden">
-                    <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
-                      <li className="flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                        <div className="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-grid"
-                            width={20}
-                            height={20}
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <rect x={4} y={4} width={6} height={6} rx={1} />
-                            <rect x={14} y={4} width={6} height={6} rx={1} />
-                            <rect x={4} y={14} width={6} height={6} rx={1} />
-                            <rect x={14} y={14} width={6} height={6} rx={1} />
-                          </svg>
-                          <span className="ml-2 font-bold">Dashboard</span>
-                        </div>
-                      </li>
-                      <li className="flex xl:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center">
-                        <div className="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-puzzle"
-                            width={20}
-                            height={20}
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
-                          </svg>
-                          <span className="ml-2 font-bold">Products</span>
-                        </div>
-                      </li>
-                      <li className="flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-compass"
-                          width={20}
-                          height={20}
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                          <circle cx={12} cy={12} r={9} />
-                        </svg>
-                        <span className="ml-2 font-bold">Performance</span>
-                      </li>
-                      <li className="border-b border-gray-300 flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-code"
-                          width={20}
-                          height={20}
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <polyline points="7 8 3 12 7 16" />
-                          <polyline points="17 8 21 12 17 16" />
-                          <line x1={14} y1={4} x2={10} y2={20} />
-                        </svg>
-                        <span className="ml-2 font-bold">Deliverables</span>
-                      </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                        <div className="flex items-center">
-                          <div className="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
-                            <img
-                              className="rounded h-10 w-10 object-cover"
-                              src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png"
-                              alt="logo"
-                            />
-                          </div>
-                          <p className="text-sm ml-2 cursor-pointer">
-                            Jane Doe
-                          </p>
-                          <div className="sm:ml-2 text-white relative">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="icon icon-tabler icon-tabler-chevron-down cursor-pointer"
-                              width={20}
-                              height={20}
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path stroke="none" d="M0 0h24v24H0z" />
-                              <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                        <div className="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-user"
-                            width={20}
-                            height={20}
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <circle cx={12} cy={7} r={4} />
-                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                          </svg>
-                          <span className="ml-2">Profile</span>
-                        </div>
-                      </li>
-                    </ul>
+                   <div className="visible xl:hidden">
+                   
                     <svg
                       onclick="MenuHandler(this,true)"
                       aria-haspopup="true"
@@ -170,8 +50,8 @@ const Header = () => {
                       <line x1={4} y1={8} x2={20} y2={8} />
                       <line x1={4} y1={16} x2={20} y2={16} />
                     </svg>
-                  </div>
-                  <div
+                  </div> 
+                <div
                     className="hidden close-m-menu text-gray-700"
                     onclick="MenuHandler(this,false)"
                   >
@@ -191,9 +71,11 @@ const Header = () => {
                       <line x1={18} y1={6} x2={6} y2={18} />
                       <line x1={6} y1={6} x2={18} y2={18} />
                     </svg>
-                  </div>
+                  </div> 
                 </div>
               </div>
+
+              {/* lg ---start */}
               <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
                 <div className="flex items-center">
                   <svg
@@ -214,12 +96,14 @@ const Header = () => {
                     </g>
                   </svg>
                   <h2 className="hidden sm:block text-base text-gray-700 font-bold leading-normal pl-3">
-                Sarwar Hossain
+                    Sarwar Hossain
                   </h2>
                 </div>
               </div>
+              {/* lg ----- items ----- */}
               <div className="flex">
-                <div className="hidden xl:flex md:mr-6 xl:mr-16">
+                <div className="hidden xl:flex items-center gap-2 md:mr-6 xl:mr-16">
+                    {MenuItem}
                   <a
                     href="javascript: void(0)"
                     className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out"
@@ -319,10 +203,11 @@ const Header = () => {
                     Deliverables
                   </a>
                 </div>
-                <div className="hidden xl:flex items-center">
+                {/* lg------end-section ------- */}
+                <div className="hidden xl:flex items-center ">
                   <div className="relative md:mr-6 my-2">
                     <button className="focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs">
-                      Manage
+                      About
                     </button>
                   </div>
                   <div className="ml-6 relative">
@@ -330,7 +215,7 @@ const Header = () => {
                       className="flex items-center relative"
                       onClick={() => setProfile(!profile)}
                     >
-                      {profile && (
+                      {/* {profile && (
                         <ul className="p-2 w-40 border-r bg-white absolute rounded right-0 shadow top-0 mt-16 ">
                           <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                             <div className="flex items-center">
@@ -393,7 +278,7 @@ const Header = () => {
                             <span className="ml-2">Account Settings</span>
                           </li>
                         </ul>
-                      )}
+                      )} */}
                       <div className="cursor-pointer flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
                         <img
                           className="rounded-full h-10 w-10 object-cover"
@@ -443,6 +328,7 @@ const Header = () => {
                 />
               </svg>
             </div>
+            {/* sm-----menubar */}
             <div className="flex items-center">
               <div className="relative mr-6 ">
                 <button className="focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs">
@@ -490,7 +376,7 @@ const Header = () => {
               className="bg-gray-800 opacity-50 w-full h-full"
               onClick={() => setShow(!show)}
             />
-            <div className="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+            <div className="w-64 z-40 fixed overflow-y-auto top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
               <div className="px-6 h-full">
                 <div className="flex flex-col justify-between h-full w-full">
                   <div>
@@ -512,7 +398,7 @@ const Header = () => {
                             />
                           </svg>
                           <p className="text-base md:text-2xl text-gray-800 ml-3">
-                            The North
+                            Sarwar Hossain
                           </p>
                         </div>
                         <div
@@ -539,7 +425,11 @@ const Header = () => {
                         </div>
                       </div>
                     </div>
-                    <ul className="f-m-m">
+                    {/* sm------nav---middle  Item */}
+                    <ul className="f-m-m ">
+                   <li className="flex flex-col mt-[30px] gap-2">
+                   {MenuItem}
+                   </li>
                       <a className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
@@ -637,7 +527,7 @@ const Header = () => {
                         </li>
                       </a>
                       <li className="text-gray-800 pt-8 cursor-pointer">
-                        <div className="flex items-center justify-between">
+                        {/* <div className="flex items-center justify-between">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
                               <svg
@@ -660,10 +550,12 @@ const Header = () => {
                               Deliverables
                             </p>
                           </div>
-                        </div>
+                        </div> */}
                       </li>
                     </ul>
                   </div>
+
+                  {/* sm----- last item */}
                   <div className="w-full pt-4">
                     <div className="flex justify-center mb-4 w-full">
                       <div className="relative w-full">
@@ -692,6 +584,7 @@ const Header = () => {
                         />
                       </div>
                     </div>
+                    {/* profile-----sm */}
                     <div className="border-t border-gray-300">
                       <div className="w-full flex items-center justify-between pt-1">
                         <div className="flex items-center">
