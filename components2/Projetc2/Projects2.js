@@ -1,6 +1,11 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const Projects2 = () => {
+
+
+  
   const [projects2, setProjects] = useState([]);
   useEffect(() => {
     fetch(`https://sarwar-hossain-server.vercel.app/projects`)
@@ -9,7 +14,13 @@ const Projects2 = () => {
         setProjects(data);
       });
   }, []);
+  
 
+
+  const projectsDetail =()=>{
+    toast('updating....')
+
+  }
   console.log(projects2);
   return (
     <div>
@@ -39,12 +50,18 @@ const Projects2 = () => {
                     {name}
                     <div className="badge badge-info">{time}</div>
                   </h2>
-                  <button className="py-3 bg-primary text-center text-slate-100 my-3">
+                 
+                
+                  <Link
+                   href={{pathname:'/ProjectsDetail',query:project}}
+                  className="py-3 bg-primary text-center text-slate-100 my-3">
+
                     Details
-                  </button>
+                  </Link >
+
                   <div className="card-actions justify-end">
                     <div className="badge badge-outline">
-                      <a href={live} target="_blank">
+                      <a href={live} className='' target="_blank">
                         {" "}
                         Live Site
                       </a>
