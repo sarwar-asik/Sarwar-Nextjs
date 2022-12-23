@@ -7,16 +7,22 @@ const Header = () => {
   const [product, setProduct] = useState(false);
   const [deliverables, setDeliverables] = useState(false);
 
-  const MenuItem =<React.Fragment>
-    <a href="" className=" pr-[25px] focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs">
-    <Link href='/'> Home</Link>
-
-    </a>
-    <a href="" className=' pr-[25px] focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs'>        
-    <Link href='/blog'> Blogs</Link>
-    </a>
-
-  </React.Fragment>
+  const MenuItem = (
+    <React.Fragment>
+      <Link
+        href="/"
+        className=" pr-[25px] focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs"
+      >
+        Home
+      </Link>
+      <Link
+        href="/blog"
+        className=" pr-[25px] focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs"
+      >
+        Blogs
+      </Link>
+    </React.Fragment>
+  );
 
   return (
     <div>
@@ -25,12 +31,9 @@ const Header = () => {
         <nav className="bg-white shadow xl:block hidden">
           <div className="mx-auto container px-6 py-2 xl:py-0">
             <div className="flex items-center justify-between">
-                
               <div className="inset-y-0 left-0 flex items-center xl:hidden">
-
                 <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
-                   <div className="visible xl:hidden">
-                   
+                  <div className="visible xl:hidden">
                     <svg
                       onclick="MenuHandler(this,true)"
                       aria-haspopup="true"
@@ -50,8 +53,8 @@ const Header = () => {
                       <line x1={4} y1={8} x2={20} y2={8} />
                       <line x1={4} y1={16} x2={20} y2={16} />
                     </svg>
-                  </div> 
-                <div
+                  </div>
+                  <div
                     className="hidden close-m-menu text-gray-700"
                     onclick="MenuHandler(this,false)"
                   >
@@ -71,13 +74,13 @@ const Header = () => {
                       <line x1={18} y1={6} x2={6} y2={18} />
                       <line x1={6} y1={6} x2={18} y2={18} />
                     </svg>
-                  </div> 
+                  </div>
                 </div>
               </div>
 
               {/* lg ---start */}
               <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
-                <Link href={'/'} className="flex items-center">
+                <Link href={"/"} className="flex items-center">
                   <svg
                     aria-label="Home"
                     id="logo"
@@ -98,13 +101,12 @@ const Header = () => {
                   <h2 className="hidden sm:block text-base text-gray-700 font-bold leading-normal pl-3">
                     Sarwar Hossain
                   </h2>
-                </Link >
+                </Link>
               </div>
               {/* lg ----- items ----- */}
               <div className="flex">
                 <div className="hidden xl:flex items-center gap-2 md:mr-6 xl:mr-16">
-                    {MenuItem}
-                
+                  {MenuItem}
                 </div>
                 {/* lg------end-section ------- */}
                 <div className="hidden xl:flex items-center ">
@@ -183,10 +185,11 @@ const Header = () => {
                         </ul>
                       )} */}
                       <div className="cursor-pointer flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
-                       
-                         <img 
-                         className="rounded-full h-10 w-10 object-cover"
-                           alt="logo" src="https://lh3.googleusercontent.com/a/AEdFTp4gcZFZEqiQnQvJ5_4J2gIib9KJkM69KfypG4BS=s400-p-rw-no"/>
+                        <img
+                          className="rounded-full h-10 w-10 object-cover"
+                          alt="logo"
+                          src="https://lh3.googleusercontent.com/a/AEdFTp4gcZFZEqiQnQvJ5_4J2gIib9KJkM69KfypG4BS=s400-p-rw-no"
+                        />
                       </div>
                       <div className="ml-2 text-gray-600">
                         <svg
@@ -215,8 +218,10 @@ const Header = () => {
         <nav>
           <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fix to-0 z-40">
             <div className="w-24">
-             
-              <h1 className="text-2xl font-semibold uppercase"> Sarwar Hossain</h1>
+              <h1 className="text-2xl font-semibold uppercase">
+                {" "}
+                Sarwar Hossain
+              </h1>
             </div>
             {/* sm-----menubar */}
             <div className="flex items-center">
@@ -274,7 +279,6 @@ const Header = () => {
                     <div className="mt-6 flex w-full items-center justify-between">
                       <div className="flex items-center justify-between w-full">
                         <div className="flex items-center">
-                         
                           <p className="text-base md:text-2xl text-gray-800">
                             Choose Menu
                           </p>
@@ -305,10 +309,9 @@ const Header = () => {
                     </div>
                     {/* sm------nav---middle  Item */}
                     <ul className="f-m-m ">
-                   <li className="flex flex-col mt-[30px] gap-2">
-                   {MenuItem}
-                   </li>
-                     
+                      <li className="flex flex-col mt-[30px] gap-2">
+                        {MenuItem}
+                      </li>
                     </ul>
                   </div>
 
@@ -345,9 +348,11 @@ const Header = () => {
                     <div className="border-t border-gray-300">
                       <div className="w-full flex items-center justify-between pt-1">
                         <div className="flex items-center">
-                        <img 
-                         className="rounded-full h-10 w-10 object-cover"
-                           alt="logo" src="https://lh3.googleusercontent.com/a/AEdFTp4gcZFZEqiQnQvJ5_4J2gIib9KJkM69KfypG4BS=s400-p-rw-no"/>
+                          <img
+                            className="rounded-full h-10 w-10 object-cover"
+                            alt="logo"
+                            src="https://lh3.googleusercontent.com/a/AEdFTp4gcZFZEqiQnQvJ5_4J2gIib9KJkM69KfypG4BS=s400-p-rw-no"
+                          />
                           <p className=" text-gray-800 text-base leading-4 ml-2">
                             Sarwar Hossain
                           </p>

@@ -1,4 +1,15 @@
-const Projects2 = ({ projects2 }) => {
+import { useEffect, useState } from "react";
+
+const Projects2 = () => {
+  const [projects2, setProjects] = useState([]);
+  useEffect(() => {
+    fetch(`https://sarwar-hossain-server.vercel.app/projects`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+      });
+  }, []);
+
   console.log(projects2);
   return (
     <div>
@@ -12,7 +23,8 @@ const Projects2 = ({ projects2 }) => {
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects2?.map((project) => {
-          const { img, name } = project;
+          const { img, name, tech, source, live, time } = project;
+          // console.log();
           return (
             <>
               <div
@@ -20,17 +32,28 @@ const Projects2 = ({ projects2 }) => {
               mx-auto bg-base-100 shadow-xl "
               >
                 <figure>
-                  <img src={img} className="h-[19rem] w-full" />
+                  <img src={img} className="h-[19rem]  w-[] projectimg" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">
                     {name}
-                    <div className="badge badge-info">NEW</div>
+                    <div className="badge badge-info">{time}</div>
                   </h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <button className="py-3 bg-primary text-center text-slate-100 my-3">
+                    Details
+                  </button>
                   <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+                    <div className="badge badge-outline">
+                      <a href={live} target="_blank">
+                        {" "}
+                        Live Site
+                      </a>
+                    </div>
+                    <div className="badge badge-outline bg-slate-600 text-lime-50">
+                      <a href={source} target="_blank">
+                        Source
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

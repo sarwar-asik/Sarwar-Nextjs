@@ -107,3 +107,12 @@ a {
     color-scheme: dark;
   }
 }
+.projectimg {
+  height: 350px;
+  /* transform: skewY(20deg); */
+  transform: rotate(15deg);
+  transition: transform 600ms ease-in;
+}
+.projectimg:hover {
+  transform: rotate(0deg);
+}
