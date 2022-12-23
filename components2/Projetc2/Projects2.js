@@ -24,8 +24,9 @@ const Projects2 = () => {
   console.log(projects2);
   return (
     <div>
-      <h1 className="text-3xl text-center  my-2 font-bold mt-[100px]">
+      <h1 className="text-3xl text-primary font-bold my-[100px]">
         My Projects
+      <div className="divider"></div> 
       </h1>
       {projects2?.length ? (
         ""

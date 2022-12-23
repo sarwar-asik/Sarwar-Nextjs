@@ -2,7 +2,12 @@ import React from "react";
 
 const Statistics = () => {
   return (
-    <div>
+    <div className="my-5">
+      <h1 className="mt-5 text-3xl text-primary font-bold">
+        {" "}
+        Projects Statistics
+        <div className="divider"></div>{" "}
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 shadow my-5 mx-auto">
         <div className="stat">
           <div className="stat-figure text-primary">
