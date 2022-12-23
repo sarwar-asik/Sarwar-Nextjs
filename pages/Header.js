@@ -219,12 +219,11 @@ const Header = () => {
         </nav>
         <nav>
           <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fix to-0 z-40">
-            <div className="w-24">
+            <Link href="/" className="w-20">
               <h1 className="text-2xl font-semibold uppercase">
-                {" "}
                 Sarwar Hossain
               </h1>
-            </div>
+            </Link>
             {/* sm-----menubar */}
             <div className="flex items-center">
               <div className="relative mr-6 ">
