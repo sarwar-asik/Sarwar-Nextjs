@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Projects2 = ({ projects2 }) => {
   console.log(projects2);

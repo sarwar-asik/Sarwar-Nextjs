@@ -1,8 +1,6 @@
-import React from "react";
-
 const Footer = () => {
   return (
-    <div className="bg-slate-300">
+    <div className="bg-slate-600">
       <footer className="footer p-10 text-neutral-content ">
         <div>
           <svg
