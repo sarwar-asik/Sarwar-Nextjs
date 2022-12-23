@@ -7,6 +7,9 @@ const Projects2 = ({ projects2 }) => {
       <h1 className="text-3xl text-center  my-2 font-bold mt-[100px]">
         My Project
       </h1>
+      {
+        projects2?.length?"":<h2 className="text-center text-2xl">Updating .....</h2>
+      }
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects2?.map((project) => {
           const { img, name } = project;

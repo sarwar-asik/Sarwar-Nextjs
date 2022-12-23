@@ -6,9 +6,11 @@ const Projects = ({ projects }) => {
   return (
     <div className="w-[80%] mx-auto">
       <h1 className="text-3xl text-center  my-2 font-bold mt-[100px]">
-        {" "}
-        My Project
+
+        My Projects
       </h1>
+      <h2> Updating.....</h2>
+     
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects?.map((project) => {
           const { img, name } = project;
