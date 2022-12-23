@@ -8,11 +8,11 @@ const Header = () => {
   const [deliverables, setDeliverables] = useState(false);
 
   const MenuItem =<React.Fragment>
-    <a href="" className="py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+    <a href="" className="py-6 pr-[25px] text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
     <Link href='/'> Home</Link>
 
     </a>
-    <a href="" className='py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out'>        
+    <a href="" className='py-6 pr-[25px] text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out'>        
     <Link href='/blog'> Blogs</Link>
     </a>
 
@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="bg-gray-200 h-full w-full">
+      <div className="bg-gray-200 h-full ">
         {/* Code block starts */}
         <nav className="bg-white shadow xl:block hidden">
           <div className="mx-auto container px-6 py-2 xl:py-0">
@@ -104,104 +104,7 @@ const Header = () => {
               <div className="flex">
                 <div className="hidden xl:flex items-center gap-2 md:mr-6 xl:mr-16">
                     {MenuItem}
-                  <a
-                    href="javascript: void(0)"
-                    className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out"
-                  >
-                    <span className="mr-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-grid"
-                        width={20}
-                        height={20}
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <rect x={4} y={4} width={6} height={6} rx={1} />
-                        <rect x={14} y={4} width={6} height={6} rx={1} />
-                        <rect x={4} y={14} width={6} height={6} rx={1} />
-                        <rect x={14} y={14} width={6} height={6} rx={1} />
-                      </svg>
-                    </span>
-                    Dashboard
-                  </a>
-                  <a
-                    href="javascript: void(0)"
-                    className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out"
-                  >
-                    <span className="mr-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-puzzle"
-                        width={20}
-                        height={20}
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
-                      </svg>
-                    </span>
-                    Products
-                  </a>
-                  <a
-                    href="javascript: void(0)"
-                    className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out"
-                  >
-                    <span className="mr-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-compass"
-                        width={20}
-                        height={20}
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                        <circle cx={12} cy={12} r={9} />
-                      </svg>
-                    </span>
-                    Performance
-                  </a>
-                  <a
-                    href="javascript: void(0)"
-                    className="flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out"
-                  >
-                    <span className="mr-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-code"
-                        width={20}
-                        height={20}
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <polyline points="7 8 3 12 7 16" />
-                        <polyline points="17 8 21 12 17 16" />
-                        <line x1={14} y1={4} x2={10} y2={20} />
-                      </svg>
-                    </span>
-                    Deliverables
-                  </a>
+                
                 </div>
                 {/* lg------end-section ------- */}
                 <div className="hidden xl:flex items-center ">
@@ -311,7 +214,7 @@ const Header = () => {
           </div>
         </nav>
         <nav>
-          <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
+          <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fix to-0 z-40">
             <div className="w-24">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -430,128 +333,7 @@ const Header = () => {
                    <li className="flex flex-col mt-[30px] gap-2">
                    {MenuItem}
                    </li>
-                      <a className="cursor-pointer">
-                        <li className="text-gray-800 pt-10">
-                          <div className="flex items-center">
-                            <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="icon icon-tabler icon-tabler-grid"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                fill="none"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path stroke="none" d="M0 0h24v24H0z" />
-                                <rect x={4} y={4} width={6} height={6} rx={1} />
-                                <rect
-                                  x={14}
-                                  y={4}
-                                  width={6}
-                                  height={6}
-                                  rx={1}
-                                />
-                                <rect
-                                  x={4}
-                                  y={14}
-                                  width={6}
-                                  height={6}
-                                  rx={1}
-                                />
-                                <rect
-                                  x={14}
-                                  y={14}
-                                  width={6}
-                                  height={6}
-                                  rx={1}
-                                />
-                              </svg>
-                            </div>
-                            <p className="text-indigo-700 xl:text-base text-base ml-3">
-                              Dashboard
-                            </p>
-                          </div>
-                        </li>
-                      </a>
-                      <a className="cursor-pointer">
-                        <li className="text-gray-800 pt-8">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center">
-                              <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="icon icon-tabler icon-tabler-puzzle"
-                                  viewBox="0 0 24 24"
-                                  strokeWidth="1.5"
-                                  stroke="currentColor"
-                                  fill="none"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                >
-                                  <path stroke="none" d="M0 0h24v24H0z" />
-                                  <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
-                                </svg>
-                              </div>
-                              <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
-                                Products
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                      </a>
-                      <a className="cursor-pointer">
-                        <li className="text-gray-800 pt-8">
-                          <div className="flex items-center">
-                            <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="icon icon-tabler icon-tabler-compass"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                fill="none"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path stroke="none" d="M0 0h24v24H0z" />
-                                <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                                <circle cx={12} cy={12} r={9} />
-                              </svg>
-                            </div>
-                            <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
-                              Performance
-                            </p>
-                          </div>
-                        </li>
-                      </a>
-                      <li className="text-gray-800 pt-8 cursor-pointer">
-                        {/* <div className="flex items-center justify-between">
-                          <div className="flex items-center">
-                            <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="icon icon-tabler icon-tabler-code"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                fill="none"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              >
-                                <path stroke="none" d="M0 0h24v24H0z" />
-                                <polyline points="7 8 3 12 7 16" />
-                                <polyline points="17 8 21 12 17 16" />
-                                <line x1={14} y1={4} x2={10} y2={20} />
-                              </svg>
-                            </div>
-                            <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
-                              Deliverables
-                            </p>
-                          </div>
-                        </div> */}
-                      </li>
+                     
                     </ul>
                   </div>
 

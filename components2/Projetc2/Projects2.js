@@ -1,16 +1,14 @@
 import React from "react";
 
-const projects = ({ projects }) => {
-  console.log(projects);
-
+const Projects2 = ({ projects2 }) => {
+  console.log(projects2);
   return (
-    <div className="w-[80%] mx-auto">
+    <div>
       <h1 className="text-3xl text-center  my-2 font-bold mt-[100px]">
-        {" "}
         My Project
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-        {projects.map((project) => {
+        {projects2?.map((project) => {
           const { img, name } = project;
           return (
             <>
@@ -41,15 +39,15 @@ const projects = ({ projects }) => {
   );
 };
 
-export default projects;
+export default Projects2;
 
 export const getStaticProps = async () => {
   const res = await fetch(`https://sarwar-hossain-server.vercel.app/projects`);
   const data = await res.json();
-  // console.log(data);
+  console.log(data);
   return {
     props: {
-      projects: data,
+      projects2: data,
     },
   };
 };
