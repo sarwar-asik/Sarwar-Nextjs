@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Header';
+
 
 const blog = () => {
     return (
         <div>
-            <Header/>
-            <h1> This is Blog.js</h1>
+         
+            <h1 className='text-center '> This is Blogs </h1>
             
         </div>
     );

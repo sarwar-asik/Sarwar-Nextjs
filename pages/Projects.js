@@ -1,16 +1,13 @@
-
-
 const Projects = ({ projects }) => {
   console.log("projects   ///...", projects);
 
   return (
     <div className="w-[80%] mx-auto">
       <h1 className="text-3xl text-center  my-2 font-bold mt-[100px]">
-
-        My Projects
+        My Project
       </h1>
       <h2> Updating.....</h2>
-     
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects?.map((project) => {
           const { img, name } = project;
@@ -45,16 +42,16 @@ const Projects = ({ projects }) => {
 
 export default Projects;
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(`https://sarwar-hossain-server.vercel.app/projects`);
-//   const data = await res.json();
-//   console.log(data);
-//   return {
-//     props: {
-//       projects: data,
-//     },
-//   };
-// };
+export const getStaticProps = async () => {
+  const res = await fetch(`https://sarwar-hossain-server.vercel.app/projects`);
+  const data = await res.json();
+  console.log(data);
+  return {
+    props: {
+      projects: data,
+    },
+  };
+};
 // export const getServerSideProps = async () => {
 //   const res = await fetch("https://sarwar-hossain-server.vercel.app/projects");
 //   const datam = await res.json();

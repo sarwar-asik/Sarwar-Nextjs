@@ -5,16 +5,16 @@ import Header from "./Header";
 import Banner2 from "../components2/Banner2/Banner2";
 import Projects2 from "../components2/Projetc2/Projects2";
 import Footer from "../components2/Footer/Footer";
+import Statistics from "../components2/statistic/Statistics";
 
 export default function Home() {
   return (
-    <div className="flex flex-col   max-w-[90%] mx-auto">
-      <Header></Header>
+    <div className="   max-w-[90%] mx-auto">
+      
       <Banner2></Banner2>
-    
+      <Statistics/>
       <Projects2></Projects2>
-      <Footer></Footer>
-
+     
     </div>
   );
 }
