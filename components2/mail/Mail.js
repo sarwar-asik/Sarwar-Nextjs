@@ -11,7 +11,7 @@ const Mail = () => {
   return (
     <div>
       <div className="hero min-h-screen ">
-        <div className="hero-content lg:flex-row gap-[30px] sm:flex-col ">
+        <div className="lg:flex gap-[30px] ">
           <div className=" lg:text-left">
             <h1 className="text-5xl font-bold">Contact Me </h1>
             <p className="py-6">

@@ -3,9 +3,6 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 const Projects2 = () => {
-
-
-  
   const [projects2, setProjects] = useState([]);
   useEffect(() => {
     fetch(`https://sarwar-hossain-server.vercel.app/projects`)
@@ -14,19 +11,16 @@ const Projects2 = () => {
         setProjects(data);
       });
   }, []);
-  
 
-
-  const projectsDetail =()=>{
-    toast('updating....')
-
-  }
+  const projectsDetail = () => {
+    toast("updating....");
+  };
   console.log(projects2);
   return (
     <div>
       <h1 className="text-3xl text-primary font-bold my-[100px]">
         My Projects
-      <div className="divider"></div> 
+        <div className="divider"></div>
       </h1>
       {projects2?.length ? (
         ""
@@ -47,22 +41,21 @@ const Projects2 = () => {
                   <img src={img} className="h-[19rem]  w-[] projectimg" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">
-                    {name}
-                    <div className="badge badge-info">{time}</div>
+                  <h2 className="card-title flex justify-between">
+                    <span className="text-2xl"> {name}</span>
+                    <span className="text-xs"> {time}</span>
                   </h2>
-                 
-                
-                  <Link
-                   href={{pathname:'/ProjectsDetail',query:project}}
-                  className="py-3 bg-primary text-center text-slate-100 my-3">
 
+                  <Link
+                    href={{ pathname: "/ProjectsDetail", query: project }}
+                    className="py-3 bg-primary text-center text-slate-100 my-3"
+                  >
                     Details
-                  </Link >
+                  </Link>
 
                   <div className="card-actions justify-end">
                     <div className="badge badge-outline">
-                      <a href={live} className='' target="_blank">
+                      <a href={live} className="" target="_blank">
                         {" "}
                         Live Site
                       </a>
