@@ -4,8 +4,13 @@ import { toast } from "react-toastify";
 const Mail = () => {
   const sendMail = (event) => {
     event.preventDefault();
-    toast("Sent. Thank you.");
     const form = event.target;
+    const email = form.email.value;
+    const message = form.message.value;
+    const send = {email,message}
+    
+    toast(`Thanks ${email}`);
+    console.log(send);
     form.reset();
   };
   return (
@@ -20,23 +25,25 @@ const Mail = () => {
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
-              <form onSubmit={sendMail} action="">
+              <form onSubmit={sendMail} action="/api/form" method="post">
                 <div className="form-control">
-                  <label className="label">
+                  <label className="label" for='email'>
                     <span className="label-text">Your Email</span>
                   </label>
                   <input
                     type="email"
+                    id="email"
                     placeholder="Type Email"
                     className="input input-bordered"
-                    required
+                 
                   />
                 </div>
                 <div className="form-control">
-                  <label className="label">
+                  <label className="label" for='message'>
                     <span className="label-text">Your Message</span>
                   </label>
                   <textarea
+                  id='message'
                     type="text"
                     placeholder="Message"
                     className="border-dotted border-4 border-primary "

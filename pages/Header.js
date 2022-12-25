@@ -18,6 +18,13 @@ const Header = () => {
       </Link>
       <Link
         onClick={() => setShow(!show)}
+        href="/login"
+        className=" pr-[25px] focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs"
+      >
+        Log In
+      </Link>
+      <Link
+        onClick={() => setShow(!show)}
         href="/blog"
         className=" pr-[25px] focus:outline-none bg-gray-100 border-gray-300 border transition duration-150 ease-in-out hover:bg-gray-300 rounded text-gray-600 px-5 py-2 text-xs"
       >
